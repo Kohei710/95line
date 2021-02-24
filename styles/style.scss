@@ -254,7 +254,7 @@ top
   }
 
   .balloon1 {
-    left: 6%;
+    left: 8%;
     top: 27%;
   }
   .balloon2 {
@@ -304,7 +304,10 @@ top
     border: 8px solid transparent;
     border-top: 8px solid rgba(188, 141, 189, 0.8);
   }
-  .hisato:before {
+  .balloon1:before{
+    margin-left: -19px;
+  }
+  .balloon5:before {
     margin-left: -13px;
   }
 
@@ -447,4 +450,47 @@ members
 .jidori td:first-child{
   width: 120px;
   text-align-last: justify;
+}
+
+/* ----------------------
+memories
+ ---------------------- */
+.main-content-container {
+  display: flex;
+  width: 90%;
+  margin: auto;
+
+  .container-title {
+    width: 40%;
+    height: 100%;
+    position: sticky;
+    top: 450px;
+  }
+
+  .content-box {
+    margin-bottom: 30px;
+  }
+
+  .content-box > img {
+    width: 100%;
+  }
+
+  .item-texts {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+  }
+
+  .item-texts > p {
+    margin: 0;
+  }
+
+  h5, h3, h2 {
+    margin: 0;
+  }
+
+  h2 {
+    font-family: Serif;
+    font-size: 30px;
+  }
 }

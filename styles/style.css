@@ -605,7 +605,7 @@ top
     .top-container .hoge .hoge:hover {
       display: none; }
   .top-container .balloon1 {
-    left: 6%;
+    left: 8%;
     top: 27%; }
   .top-container .balloon2 {
     left: 15%;
@@ -642,7 +642,9 @@ top
     margin-left: -9px;
     border: 8px solid transparent;
     border-top: 8px solid rgba(188, 141, 189, 0.8); }
-  .top-container .hisato:before {
+  .top-container .balloon1:before {
+    margin-left: -19px; }
+  .top-container .balloon5:before {
     margin-left: -13px; }
   .top-container .balloons p {
     margin: 0;
@@ -741,5 +743,33 @@ members
 .jidori td:first-child {
   width: 120px;
   text-align-last: justify; }
+
+/* ----------------------
+memories
+ ---------------------- */
+.main-content-container {
+  display: flex;
+  width: 90%;
+  margin: auto; }
+  .main-content-container .container-title {
+    width: 40%;
+    height: 100%;
+    position: sticky;
+    top: 450px; }
+  .main-content-container .content-box {
+    margin-bottom: 30px; }
+  .main-content-container .content-box > img {
+    width: 100%; }
+  .main-content-container .item-texts {
+    display: flex;
+    justify-content: space-between;
+    margin: 0; }
+  .main-content-container .item-texts > p {
+    margin: 0; }
+  .main-content-container h5, .main-content-container h3, .main-content-container h2 {
+    margin: 0; }
+  .main-content-container h2 {
+    font-family: Serif;
+    font-size: 30px; }
 
 /*# sourceMappingURL=style.css.map */
