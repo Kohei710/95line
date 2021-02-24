@@ -270,7 +270,7 @@ top
     top: 37%;
   }
   .balloon5 {
-    left: 35.5%;
+    left: 36.5%;
     top: 27%;
   }
   .balloon6 {
@@ -294,6 +294,7 @@ top
     top: 37%;
   }
 
+
   .balloons:before {
     content: "";
     position: absolute;
@@ -302,6 +303,9 @@ top
     margin-left: -9px;
     border: 8px solid transparent;
     border-top: 8px solid rgba(188, 141, 189, 0.8);
+  }
+  .hisato:before {
+    margin-left: -13px;
   }
 
   .balloons p {
