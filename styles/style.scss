@@ -1,0 +1,446 @@
+/* ----------------------
+base
+ ---------------------- */
+@import "reset";
+
+$pc: 1024px; // PC
+$sp: 480px;  // スマホ
+
+@mixin pc {
+  @media (max-width: ($pc)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+$main_purple: #bc8dbd;
+
+body {
+  font-family: Serif;
+}
+img {
+  width: 80%;
+}
+.heading {
+  font-size: 43px;
+  font-weight: bold;
+  color: $main_purple;
+  margin: 120px 0 40px 80px;
+  display: inline-block;
+  text-shadow: 6px 3px #808080; /* 文字の影 */
+  @include sp {
+    font-size: 27px;
+    text-shadow: 3px 2px #808080;
+    margin: 0 0 40px 40px;
+  }
+}
+
+/* ----------------------
+ヘッダー
+ ---------------------- */
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px;
+  .header-logo {
+    width: 300px;
+    margin-left: 35px;
+    @include sp {
+      width: 130px;
+      margin: 0;
+    }
+  }
+  .header-right {
+    display: flex;
+    margin: 12px 27px;
+    @include sp {
+      margin: 0;
+    }
+
+    .header-icon {
+      //height: 60px;
+      margin: 0 15px;
+      @include sp {
+        margin: 0;
+      }
+      display: flex;
+
+      img {
+        width: 60px;
+        @include sp {
+          width: 30px;
+        }
+      }
+
+      p {
+        font-size: 36px;
+        margin: 7px 10px 0 10px;
+        color:$main_purple;
+        font-family: "Hiragino Maru Gothic Pro";
+      }
+    }
+    .insta-icon {
+      @include sp {
+        display: none;
+      }
+    }
+    ///言語選択ボタン///
+    .lang{
+      list-style-type: none;
+      //height: 40px;
+      margin: 0 auto;
+      padding: 0;
+      //background-color:$main_purple;
+      @include pc {
+        width: 90px;
+      }
+      @include sp {
+        width: 40px;
+      }
+    }
+    .lang li{
+      position: relative;
+      width: 300%;
+      float: left;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    .lang li a{
+      display: block;
+      margin: 0;
+      color:$main_purple;
+      //font-size: 14px;
+      font-weight: bold;
+      line-height: 1;
+      text-decoration: none;
+    }
+    .lang li ul{
+      list-style: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      margin: 0;
+      padding: 0;
+    }
+    .lang li ul li{
+      overflow: hidden;
+      width: 100%;
+      height: 0;
+      color:$main_purple;
+      -moz-transition: .2s;
+      -webkit-transition: .2s;
+      -o-transition: .2s;
+      -ms-transition: .2s;
+      transition: .2s;
+    }
+    .lang li ul li a{
+      //padding: 12px 15px;
+      height: 100%;
+      background: white;
+      font-size: 15px;
+      font-weight: normal;
+      text-align: center;
+      font-family: 'Single Day', cursive, 'M PLUS Rounded 1c', sans-serif;
+      @include sp {
+        font-size: 3px;
+      }
+    }
+    .lang li:hover > .lan-li{
+      background:$main_purple;
+      color: white;
+    }
+    .lang li:hover ul {
+      border-radius: 5px;
+      border: 1px solid$main_purple;
+      overflow:hidden;
+    }
+    .lang li:hover ul li{
+      height: 38px;
+      @include sp {
+        height: 15px;
+      }
+    }
+    .lang li:hover ul li:first-child{
+      border-bottom: 1px solid$main_purple;
+    }
+    .hamburger {
+      display: none;
+      @include pc {
+        display: flex;
+      }
+    }
+  }
+
+}
+/* ----------------------
+top
+ ---------------------- */
+.top-container {
+  display: flex;
+  justify-content: space-between;
+  .menu {
+    margin: 180px 0 0 90px;
+    font-size: 23px;
+    width: 40%;
+    font-weight: 600;
+    font-style: italic;
+    @include sp {
+      display: none;
+    }
+
+    //ホバーアニメーション
+    .marker{
+      position: relative;
+      z-index: 1;
+      cursor: pointer;
+      line-height: 180%;
+      letter-spacing: 2px;
+    }
+    .marker::after{
+      content:"";
+      width: 0%;    /*最初はwidth:0にする*/
+      height: 8px;
+      background:$main_purple;
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      z-index: -1;
+      transition: all .3s;  /*アニメーションの長さ*/
+    }
+    .marker:hover::after{
+      width: 100%;    /*hover時に100%で広がる*/
+    }
+  }
+
+  img {
+    padding: 30px 90px 0 0;
+    width: 100%;
+    @include sp {
+      margin: 60px auto 0 auto;
+      width: 85%;
+    }
+  }
+  ///タグ///
+  .member-tags {
+    position: relative;
+  }
+
+  .balloons {
+    //display: none;
+    position: absolute;
+    display: inline-block;
+    margin: 1.5em 0;
+    padding: 6px 9px;
+    min-width: 60px;
+    max-width: 100%;
+    color: black;
+    font-size: 16px;
+    background: rgba(188, 141, 189, 0.8);
+    letter-spacing: 2.5px;
+    text-align: center;
+    border-radius: 4px;
+
+  }
+  .hoge {
+    width: 100%;
+    //position: absolute;
+    .hoge:hover {
+      display: none;
+    }
+  }
+
+  .balloon1 {
+    left: 6%;
+    top: 27%;
+  }
+  .balloon2 {
+    left: 15%;
+    top: 37%;
+  }
+  .balloon3 {
+    left: 22%;
+    top: 27%;
+  }
+  .balloon4 {
+    left: 28%;
+    top: 37%;
+  }
+  .balloon5 {
+    left: 35.5%;
+    top: 27%;
+  }
+  .balloon6 {
+    left: 43%;
+    top: 37%;
+  }
+  .balloon7 {
+    left: 51%;
+    top: 27%;
+  }
+  .balloon8 {
+    left: 57%;
+    top: 37%;
+  }
+  .balloon9 {
+    left: 63%;
+    top: 27%;
+  }
+  .balloon10 {
+    left: 70%;
+    top: 37%;
+  }
+
+  .balloons:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -9px;
+    border: 8px solid transparent;
+    border-top: 8px solid rgba(188, 141, 189, 0.8);
+  }
+
+  .balloons p {
+    margin: 0;
+    padding: 0;
+  }
+}
+/* ----------------------
+about
+ ---------------------- */
+.about-container {
+  margin-top: 100px;
+
+  //h1 {
+  //  font-size: 43px;
+  //  font-weight: bold;
+  //  color: $main_purple;
+  //  margin: 120px 0 40px 50px;
+  //  display     : inline-block;
+  //  text-shadow : 6px 3px #808080;  /* 文字の影 */
+  //  @include sp {
+  //    font-size: 27px;
+  //    text-shadow: 3px 2px #808080;
+  //    margin: 0 0 40px 40px;
+  //  }
+  //}
+  .about-image {
+    width: 60%;
+    margin: 0 auto;
+    @include sp {
+      width: 70%;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  h2 {
+    font-size: 37px;
+    text-align: center;
+    margin: 40px;
+    @include sp {
+      font-size: 14px;
+      margin: 20px;
+    }
+  }
+}
+/* ----------------------
+members
+ ---------------------- */
+.member-container {
+  margin-top: 100px;
+  .member-box {
+    width: 70%;
+    height: 40vh;
+    //display: inline-block;
+    margin: 90px auto;
+    .member-image {
+      width: 22%;
+      position: absolute;
+      //left: 15%;
+      z-index: 0;
+      img {
+        width: 100%;
+      }
+    }
+    .member-image:after {
+      position: absolute;
+      top:15px;
+      left:-15px;
+      border: 3px solid gray;
+      content:"";
+      height:100%;
+      width:100%;
+    }
+    .member-name {
+      text-align: right;
+      font-size: 38px;
+      color: grey;
+    }
+    .member-detail {
+      //background-color: $main_purple;
+      color: white;
+      width: 90%;
+      float: right;
+      padding: 25px 25px 10px 25%;
+      height: 40vh;
+      font-size: 20px;
+      font-family: Serif;
+      li {
+        vertical-align: middle;
+        list-style: square;
+
+      }
+    }
+  }
+  .member-box2 {
+    .member-image2 {
+      right: 15%;
+    }
+    .member-image2:after {
+      left:15px;
+    }
+    .member-name2 {
+      text-align: left;
+    }
+    .member-detail2 {
+      float: left;
+      padding: 25px 25% 10px 25px;
+    }
+  }
+  .women-color {
+    background-color: $main_purple;
+  }
+  .men-color {
+    background-color: #85b5b4;
+  }
+  .member-box3 {
+    .member-image2 {
+      left: 15%;
+    }
+  }
+}
+.jidori{
+  width:100%;
+  height: 100%;
+  padding: 10px;
+  font-size:20px;
+  table-layout:auto;
+  //border: 3px solid black;
+  word-break: break-all;
+  //word-wrap: break-all;
+}
+.jidori td{
+  padding-right:5px;
+  -moz-text-align-last: justify;
+  text-justify:inter-ideograph;
+  border:none;
+}
+.jidori td:first-child{
+  width: 120px;
+  text-align-last: justify;
+}
