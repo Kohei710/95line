@@ -225,14 +225,15 @@ top
     }
   }
   ///タグ///
-  .member-tags {
-    position: relative;
+  .balloonoya {
+    position   : relative;                /* 指定した分だけ相対的に移動 */
   }
-
+  .balloonoya:hover .balloons {
+    display: inline;                /* インライン要素として表示 */
+  }
   .balloons {
-    //display: none;
-    position: absolute;
-    display: inline-block;
+    position   : absolute;                /* 親要素を基準 */
+    display: none;                        /* 要素を非表示 */
     margin: 1.5em 0;
     padding: 6px 9px;
     min-width: 60px;
@@ -243,18 +244,10 @@ top
     letter-spacing: 2.5px;
     text-align: center;
     border-radius: 4px;
-
-  }
-  .hoge {
-    width: 100%;
-    //position: absolute;
-    .hoge:hover {
-      display: none;
-    }
   }
 
   .balloon1 {
-    left: 6%;
+    left: 8%;
     top: 27%;
   }
   .balloon2 {
@@ -293,8 +286,6 @@ top
     left: 70%;
     top: 37%;
   }
-
-
   .balloons:before {
     content: "";
     position: absolute;
@@ -304,7 +295,10 @@ top
     border: 8px solid transparent;
     border-top: 8px solid rgba(188, 141, 189, 0.8);
   }
-  .hisato:before {
+  .balloon1:before{
+    margin-left: -19px;
+  }
+  .balloon5:before {
     margin-left: -13px;
   }
 
@@ -312,7 +306,19 @@ top
     margin: 0;
     padding: 0;
   }
+  .balloons:after{
+    //border-right: 12px solid rgba(255, 102, 255, 0.50);  /* 吹き出し口の幅・色 */
+    //border-top: 10px solid transparent;     /* 吹き出し口の高さ１／２ */
+    //border-bottom: 10px solid transparent;  /* 吹き出し口の高さ１／２ */
+    left: 12px;                            /* 吹き出し口の位置調整 */
+    //top: 5%;                                /* 吹き出し口の縦位置 */
+    //content: "";                       /* コンテンツの挿入 */
+    position: absolute;                /* 親要素を基準 */
+  }
 }
+
+
+
 /* ----------------------
 about
  ---------------------- */
@@ -384,6 +390,8 @@ members
       text-align: right;
       font-size: 38px;
       color: grey;
+      position: relative;
+      top: 8px;
     }
     .member-detail {
       //background-color: $main_purple;
@@ -447,4 +455,63 @@ members
 .jidori td:first-child{
   width: 120px;
   text-align-last: justify;
+}
+
+/* ----------------------
+contents
+ ---------------------- */
+.contents-container {
+  color: #868686;
+}
+.main-content-container {
+  display: flex;
+  width: 90%;
+  margin: auto;
+
+
+  .container-title {
+    width: 40%;
+    height: 100%;
+    position: sticky;
+    top: 450px;
+    text-align: center;
+    font-size: 50px;
+
+  }
+  .items {
+    width: 70%;
+    .content-box {
+      margin-bottom: 30px;
+
+      img {
+        width: 100%;
+      }
+    }
+    .item-texts {
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
+      p {
+        font-size: 25px;
+      }
+    }
+
+    h2 {
+      font-family: Serif;
+      font-size: 30px;
+    }
+  }
+}
+.icon-box {
+  display: flex;
+  margin: 100px;
+  .item-icons {
+    margin-left: 50px;
+  }
+  img {
+    width: 150px;
+  }
+  p {
+    text-align: center;
+  }
 }
