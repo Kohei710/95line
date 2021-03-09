@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
 
@@ -10,12 +10,12 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
     <script src="script.js"></script>
 <!--    OGP-->
-<!--    <meta property="og:url" content=" ページの URL" />-->
-<!--    <meta property="og:type" content=" ページの種類" />-->
-<!--    <meta property="og:title" content=" ページの タイトル" />-->
-<!--    <meta property="og:description" content=" ページの説明文" />-->
-<!--    <meta property="og:site_name" content="サイト名" />-->
-    <meta property="og:image" content="images/7.Sawashige%20Toshiki.jpg" />
+    <meta property="og:url" content="https://gavihei.github.io/95line/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="95line" />
+    <meta property="og:description" content=" ついに18学番95Line’sのwebページが本格展開!!95の愉快なキャンパスライフが見れちゃいます:）" />
+    <meta property="og:site_name" content="95line" />
+    <meta property="og:image" content="https://gavihei.github.io/95line/images/top-image3.png" />
 <!--    web fonts-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&display=swap" rel="stylesheet">
@@ -50,27 +50,26 @@
             <ul>
                 <a class="marker" href="#">TOP</a><br>
                 <a class="marker" href="#about">ABOUT</a><br>
-                <a class="marker" href="#">MEMBERS</a><br>
+                <a class="marker" href="#member">MEMBERS</a><br>
                 <a class="marker" href="#">MEMORIES</a><br>
-                <a class="marker" href="#">CONTENTS</a><br>
+                <a class="marker" href="#contents">CONTENTS</a><br>
             </ul>
         </div>
-        <div class="member-tags">
+        <div class="balloonoya">
             <img src="images/top-image3.png" alt="">
-            <div class="hoge">
-                <div class="balloons balloon1"><p>Shinya</p></div>
-                <div class="balloons balloon2"><p>Reina</p></div>
-                <div class="balloons balloon3"><p>Mayuki</p></div>
-                <div class="balloons balloon4"><p>Megumi</p></div>
-                <div class="balloons balloon5 hisato"><p>Hisato</p></div>
-                <div class="balloons balloon6"><p>Hayato</p></div>
-                <div class="balloons balloon7"><p>Nami</p></div>
-                <div class="balloons balloon8"><p>Kanna</p></div>
-                <div class="balloons balloon9"><p>Haruyo</p></div>
-                <div class="balloons balloon10"><p>Toshiki</p></div>
-            </div>
+            <div class="balloons balloon1"><a href="#Shinya">Shinya</a></div>
+            <div class="balloons balloon2"><a href="#Reina">Reina</a></div>
+            <div class="balloons balloon3"><a href="#Mayuki">Mayuki</a></div>
+            <div class="balloons balloon4"><a href="#Megumi">Megumi</a></div>
+            <div class="balloons balloon5"><a href="#Hisato">Hisato</a></div>
+            <div class="balloons balloon6"><a href="#Hayato">Hayato</a></div>
+            <div class="balloons balloon7"><a href="#Nami">Nami</a></div>
+            <div class="balloons balloon8"><a href="#Kanna">Kanna</a></div>
+            <div class="balloons balloon9"><a href="#Haruyo">Haruyo</a></div>
+            <div class="balloons balloon10"><a href="#Toshiki">Toshiki</a></div>
         </div>
     </div>
+
 
     <div class="about-container" id="about">
         <h1 class="heading">ABOUT</h1>
@@ -82,21 +81,14 @@
         <h2>Sunmoon univ 18 studies turn95Line’ s</h2>
     </div>
 
-    <div class="member-container">
+    <div class="member-container" id="member">
         <h1 class="heading">MEMBERS</h1>
-        <div class="member-box member-box3">
+        <div class="member-box member-box3" id="Haruyo">
             <div class="member-image member-image">
                 <img src="images/1.Ishimi%20Haruyo.jpg" alt="">
             </div>
             <h2 class="member-name member-name">Ishimi Haruyo</h2>
             <div class="member-detail member-detail women-color">
-<!--                <ul>-->
-<!--                    <li>出身:愛知県</li>-->
-<!--                    <li>誕生日:1996.02.28</li>-->
-<!--                    <li>趣味:旅行、映画鑑賞、カフェ巡り、ネイル、旅行、ファッションなど</li>-->
-<!--                    <li>学科:視覚デザイン学科</li>-->
-<!--                    <li>動物占い:しっかり者の子鹿</li>-->
-<!--                </ul>-->
                 <table class="jidori">
                     <tr>
                         <td><li>出身</li></td>
@@ -126,7 +118,7 @@
                 </table>
             </div>
         </div>
-        <div class="member-box member-box2">
+        <div class="member-box member-box2" id="Shinya">
             <div class="member-image member-image2">
                 <img src="images/2.Ito%20Shinya.jpg" alt="">
             </div>
@@ -161,7 +153,7 @@
                 </table>
             </div>
         </div>
-        <div class="member-box member-box3">
+        <div class="member-box member-box3" id="Megumi">
             <div class="member-image member-image">
                 <img src="images/3.Iwasaki%20Megumi.jpg" alt="">
             </div>
@@ -186,7 +178,7 @@
                     <tr>
                         <td><li>学科</li></td>
                         <td>:</td>
-                        <td>グローバルソフトウェア学科</td>
+                        <td>ITソフトウェア学科</td>
                     </tr>
                     <tr>
                         <td><li>動物占い</li></td>
@@ -196,7 +188,7 @@
                 </table>
             </div>
         </div>
-        <div class="member-box member-box2">
+        <div class="member-box member-box2" id="Mayuki">
             <div class="member-image member-image2">
                 <img src="images/4.Kamiike%20Mayuki.jpg" alt="">
             </div>
@@ -231,7 +223,7 @@
                 </table>
             </div>
         </div>
-        <div class="member-box member-box3">
+        <div class="member-box member-box3" id="Reina">
             <div class="member-image member-image">
                 <img src="images/5.Kawanami%20Reina.jpg" alt="">
             </div>
@@ -266,7 +258,7 @@
                 </table>
             </div>
         </div>
-        <div class="member-box member-box2">
+        <div class="member-box member-box2" id="Hisato">
             <div class="member-image member-image2">
                 <img src="images/6.Sakata%20Hisato.JPG" alt="">
             </div>
@@ -301,7 +293,7 @@
                 </table>
             </div>
         </div>
-        <div class="member-box member-box3">
+        <div class="member-box member-box3" id="Toshiki">
             <div class="member-image member-image">
                 <img src="images/7.Sawashige%20Toshiki.jpg" alt="">
             </div>
@@ -316,7 +308,7 @@
                     <tr>
                         <td><li>誕生日</li></td>
                         <td>:</td>
-                        <td>1996.01.26</td>
+                        <td>1996.01.28</td>
                     </tr>
                     <tr>
                         <td><li>趣味</li></td>
@@ -336,7 +328,7 @@
                 </table>
             </div>
         </div>
-        <div class="member-box member-box2">
+        <div class="member-box member-box2" id="Nami">
             <div class="member-image member-image2">
                 <img src="images/8.Shida%20Nami.jpg" alt="">
             </div>
@@ -370,7 +362,7 @@
                     </tr>
                 </table>
             </div>
-        </div><div class="member-box member-box3">
+        </div><div class="member-box member-box3" id="Hayato">
         <div class="member-image member-image">
             <img src="images/9.Tsukada%20Hayato.jpg" alt="">
         </div>
@@ -405,7 +397,7 @@
             </table>
         </div>
     </div>
-        <div class="member-box member-box2">
+        <div class="member-box member-box2" id="Kanna">
             <div class="member-image member-image2">
                 <img src="images/10.Hirai%20Kanna.jpg" alt="">
             </div>
@@ -430,7 +422,7 @@
                 <tr>
                     <td><li>学科</li></td>
                     <td>:</td>
-                    <td>グローバル経済学科</td>
+                    <td>国際経済通商学科</td>
                 </tr>
                 <tr>
                     <td><li>動物占い</li></td>
@@ -442,23 +434,42 @@
         </div>
 
     </div>
-    <div class="contents-container">
+    <div class="contents-container" id="contents">
         <h1 class="heading">CONTENTS</h1>
+        <div class="icon-box">
+            <div class="item-icons">
+                <div class="item-icon">
+                    <a href="#t-shirt"><img src="images/95-Tshirt.png" alt=""></a>
+                </div>
+                <div class="icon-name">
+                    <p>Tシャツ</p>
+                </div>
+            </div>
+            <div class="item-icons">
+                <div class="item-icon">
+                    <a href="#stamp"><img src="images/95-stamp-.png" alt=""></a>
+                </div>
+                <div class="icon-name">
+                    <p>LINE stamp</p>
+                </div>
+            </div>
+
+        </div>
         <div class="main-content-container">
             <div class="container-title">
-                <h2>Tシャツ</h2>
+                <h2 id="t-shirt">T-Shirt</h2>
             </div>
             <div class="items">
                 <div class="content-box">
-                    <img src="images/1.Ishimi%20Haruyo.jpg" alt="">
+                    <img src="images/95-T-Shirt-front.jpg" alt="">
                     <div class="item-texts">
-                        <p>haruyo</p>
+                        <p>front</p>
                     </div>
                 </div>
                 <div class="content-box">
-                    <img src="images/2.Ito%20Shinya.jpg" alt="">
+                    <img src="images/95-Tshirt-back.jpg" alt="">
                     <div class="item-texts">
-                        <p>shinya</p>
+                        <p>back</p>
                     </div>
                 </div>
                 <div class="content-box">
@@ -471,25 +482,19 @@
         </div>
         <div class="main-content-container">
             <div class="container-title">
-                <h2>動画</h2>
+                <h2 id="stamp">Stamp</h2>
             </div>
             <div class="items">
                 <div class="content-box">
-                    <img src="images/1.Ishimi%20Haruyo.jpg" alt="">
+                    <img src="images/95-stamp1.jpg" alt="">
                     <div class="item-texts">
-                        <p>haruyo</p>
+                        <p>stamp1</p>
                     </div>
                 </div>
                 <div class="content-box">
-                    <img src="images/2.Ito%20Shinya.jpg" alt="">
+                    <img src="images/95-stamp2.jpg" alt="">
                     <div class="item-texts">
-                        <p>shinya</p>
-                    </div>
-                </div>
-                <div class="content-box">
-                    <img src="images/7.Sawashige%20Toshiki.jpg" alt="">
-                    <div class="item-texts">
-                        <p>toshiki</p>
+                        <p>stamp2</p>
                     </div>
                 </div>
             </div>

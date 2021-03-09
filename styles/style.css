@@ -585,11 +585,17 @@ top
       .top-container img {
         margin: 60px auto 0 auto;
         width: 85%; } }
-  .top-container .member-tags {
-    position: relative; }
+  .top-container .balloonoya {
+    position: relative;
+    /* 指定した分だけ相対的に移動 */ }
+  .top-container .balloonoya:hover .balloons {
+    display: inline;
+    /* インライン要素として表示 */ }
   .top-container .balloons {
     position: absolute;
-    display: inline-block;
+    /* 親要素を基準 */
+    display: none;
+    /* 要素を非表示 */
     margin: 1.5em 0;
     padding: 6px 9px;
     min-width: 60px;
@@ -600,10 +606,6 @@ top
     letter-spacing: 2.5px;
     text-align: center;
     border-radius: 4px; }
-  .top-container .hoge {
-    width: 100%; }
-    .top-container .hoge .hoge:hover {
-      display: none; }
   .top-container .balloon1 {
     left: 8%;
     top: 27%; }
@@ -649,6 +651,11 @@ top
   .top-container .balloons p {
     margin: 0;
     padding: 0; }
+  .top-container .balloons:after {
+    left: 12px;
+    /* 吹き出し口の位置調整 */
+    position: absolute;
+    /* 親要素を基準 */ }
 
 /* ----------------------
 about
@@ -698,7 +705,9 @@ members
     .member-container .member-box .member-name {
       text-align: right;
       font-size: 38px;
-      color: grey; }
+      color: grey;
+      position: relative;
+      top: 8px; }
     .member-container .member-box .member-detail {
       color: white;
       width: 90%;
@@ -745,8 +754,11 @@ members
   text-align-last: justify; }
 
 /* ----------------------
-memories
+contents
  ---------------------- */
+.contents-container {
+  color: #868686; }
+
 .main-content-container {
   display: flex;
   width: 90%;
@@ -755,21 +767,33 @@ memories
     width: 40%;
     height: 100%;
     position: sticky;
-    top: 450px; }
-  .main-content-container .content-box {
-    margin-bottom: 30px; }
-  .main-content-container .content-box > img {
-    width: 100%; }
-  .main-content-container .item-texts {
-    display: flex;
-    justify-content: space-between;
-    margin: 0; }
-  .main-content-container .item-texts > p {
-    margin: 0; }
-  .main-content-container h5, .main-content-container h3, .main-content-container h2 {
-    margin: 0; }
-  .main-content-container h2 {
-    font-family: Serif;
-    font-size: 30px; }
+    top: 450px;
+    text-align: center;
+    font-size: 50px; }
+  .main-content-container .items {
+    width: 70%; }
+    .main-content-container .items .content-box {
+      margin-bottom: 30px; }
+      .main-content-container .items .content-box img {
+        width: 100%; }
+    .main-content-container .items .item-texts {
+      display: flex;
+      justify-content: space-between;
+      margin: 0; }
+      .main-content-container .items .item-texts p {
+        font-size: 25px; }
+    .main-content-container .items h2 {
+      font-family: Serif;
+      font-size: 30px; }
+
+.icon-box {
+  display: flex;
+  margin: 100px; }
+  .icon-box .item-icons {
+    margin-left: 50px; }
+  .icon-box img {
+    width: 150px; }
+  .icon-box p {
+    text-align: center; }
 
 /*# sourceMappingURL=style.css.map */
