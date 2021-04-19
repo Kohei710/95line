@@ -413,7 +413,8 @@ template {
   display: none; }
 
 body {
-  font-family: Serif; }
+  font-family: Serif;
+  padding-bottom: 500px; }
 
 img {
   width: 80%; }
@@ -583,8 +584,7 @@ top
     width: 100%; }
     @media (max-width: 480px) {
       .top-container img {
-        margin: 60px auto 0 auto;
-        width: 85%; } }
+        padding: 0; } }
   .top-container .balloonoya {
     position: relative;
     /* 指定した分だけ相対的に移動 */ }
@@ -606,6 +606,10 @@ top
     letter-spacing: 2.5px;
     text-align: center;
     border-radius: 4px; }
+    @media (max-width: 480px) {
+      .top-container .balloons {
+        font-size: 5px;
+        letter-spacing: 1.5px; } }
   .top-container .balloon1 {
     left: 8%;
     top: 27%; }
@@ -656,6 +660,23 @@ top
     /* 吹き出し口の位置調整 */
     position: absolute;
     /* 親要素を基準 */ }
+
+/* ----------------------
+modal
+ ---------------------- */
+.open, .close {
+  width: 120px;
+  cursor: pointer; }
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: #bc8dbd;
+  display: none; }
 
 /* ----------------------
 about
@@ -789,11 +810,83 @@ contents
 .icon-box {
   display: flex;
   margin: 100px; }
+  @media (max-width: 480px) {
+    .icon-box {
+      width: 50px;
+      margin: 0; }
+      .icon-box img {
+        width: 50px; } }
   .icon-box .item-icons {
     margin-left: 50px; }
-  .icon-box img {
+  .icon-box .item-icon {
     width: 150px; }
   .icon-box p {
     text-align: center; }
+
+/* ----------------------
+memories
+ ---------------------- */
+.memories-container {
+  width: 80%;
+  margin: auto; }
+  .memories-container .event-header {
+    display: flex;
+    margin-bottom: 60px; }
+    .memories-container .event-header .event-cate {
+      width: 150px;
+      font-size: 20px;
+      padding: 10px 20px;
+      margin: 20px;
+      color: #868686;
+      border: 2px solid #bc8dbd;
+      border-radius: 5px;
+      text-align: center; }
+    .memories-container .event-header .event-cate:hover {
+      background-color: #bc8dbd;
+      color: white; }
+  .memories-container .events-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 500px; }
+    .memories-container .events-container .event-card {
+      width: 18vw;
+      height: auto;
+      border: 3px solid #bc8dbd;
+      margin: 10px; }
+      .memories-container .events-container .event-card .event-image {
+        margin: 10px auto;
+        background-color: black;
+        width: 15vw;
+        height: 15vw;
+        position: relative;
+        border: 1px solid darkgray; }
+        .memories-container .events-container .event-card .event-image img {
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          width: auto;
+          height: auto;
+          max-width: 100%;
+          max-height: 100%; }
+      .memories-container .events-container .event-card p {
+        text-align: center;
+        margin: 20px; }
+
+.event-header {
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch; }
+
+.event-cate {
+  /* 横スクロール用 */
+  display: inline-block;
+  width: 90%; }
+
+#tabpage1 {
+  background-color: #868686;
+  height: 300px; }
 
 /*# sourceMappingURL=style.css.map */

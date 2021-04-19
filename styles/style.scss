@@ -20,6 +20,7 @@ $main_purple: #bc8dbd;
 
 body {
   font-family: Serif;
+  padding-bottom: 500px;
 }
 img {
   width: 80%;
@@ -220,8 +221,9 @@ top
     padding: 30px 90px 0 0;
     width: 100%;
     @include sp {
-      margin: 60px auto 0 auto;
-      width: 85%;
+      //margin: 60px auto 0 auto;
+      //width: 85%;
+      padding: 0;
     }
   }
   ///タグ///
@@ -244,6 +246,10 @@ top
     letter-spacing: 2.5px;
     text-align: center;
     border-radius: 4px;
+    @include sp {
+      font-size: 5px;
+      letter-spacing: 1.5px;
+    }
   }
 
   .balloon1 {
@@ -316,9 +322,26 @@ top
     position: absolute;                /* 親要素を基準 */
   }
 }
+/* ----------------------
+modal
+ ---------------------- */
+.open, .close {
+  //border: 1px solid #333333;
+  width: 120px;
+  cursor: pointer;
+  //background-color: darkgray;
+}
 
-
-
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: $main_purple;
+  display: none;
+}
 /* ----------------------
 about
  ---------------------- */
@@ -505,13 +528,98 @@ contents
 .icon-box {
   display: flex;
   margin: 100px;
+  @include sp {
+    width: 50px;
+    margin: 0;
+    img {
+      width: 50px;
+    }
+  }
   .item-icons {
     margin-left: 50px;
   }
-  img {
+  .item-icon {
     width: 150px;
   }
   p {
     text-align: center;
   }
+}
+
+/* ----------------------
+memories
+ ---------------------- */
+.memories-container {
+  width: 80%;
+  margin: auto;
+  .event-header {
+    display: flex;
+    margin-bottom: 60px;
+    .event-cate {
+      width: 150px;
+      font-size: 20px;
+      padding: 10px 20px;
+      margin: 20px;
+      color: #868686;
+      border: 2px solid $main_purple;
+      border-radius: 5px;
+      text-align: center;
+
+    }
+    .event-cate:hover {
+       background-color: $main_purple;
+       color: white;
+     }
+  }
+  .events-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 500px;
+    .event-card {
+      width: 18vw;
+      height: auto;
+      border: 3px solid $main_purple;
+      margin: 10px;
+      .event-image {
+        margin: 10px auto;
+        background-color: black;
+        width: 15vw;
+        height: 15vw;
+        position: relative;
+        border: 1px solid darkgray;
+        img {
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          width:auto;
+          height:auto;
+          max-width:100%;
+          max-height:100%;
+        }
+      }
+      p {
+        text-align: center;
+        margin: 20px;
+      }
+    }
+  }
+
+}
+.event-header {
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.event-cate {
+  /* 横スクロール用 */
+  display: inline-block;
+  width: 90%;
+}
+#tabpage1 {
+  background-color: #868686;
+  height: 300px;
 }
