@@ -890,3 +890,119 @@ memories
   height: 300px; }
 
 /*# sourceMappingURL=style.css.map */
+
+
+/* ////////////////////////////// */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.tab_contents {
+	width: 100%;
+	margin: 20px auto;
+}
+
+.tab_wrap {
+	margin: 50px auto;
+	opacity: 0.8;
+}
+@media screen and (max-width:900px) {
+	.tab_wrap {
+		width: 100%;
+		margin: 0 auto;
+		opacity: 0.8;
+	}
+}
+
+/*タブボタンデザイン*/
+.tab_lab1, .tab_lab2, .tab_lab3, .tab_lab4, .tab_lab5, .tab_lab6 {
+  width: 150px;
+  font-size: 20px;
+  padding: 10px 20px;
+  margin: 20px;
+  color: #868686;
+  border: 2px solid #bc8dbd;
+  border-radius: 5px;
+  text-align: center; 
+}
+
+/*タブにチェック入ったとき*/
+#tab1:checked~.tab_lab1, #tab2:checked~.tab_lab2, #tab3:checked~.tab_lab3, #tab4:checked~.tab_lab4, #tab5:checked~.tab_lab5, #tab6:checked~.tab_lab6  {
+	background: #bc8dbd;
+	color: white
+}
+
+/*タブボタンとボックス連動*/
+#tab1:checked~.panels #area1 {
+	display: block;
+}
+#tab2:checked~.panels #area2 {
+	display: block;
+}
+#tab3:checked~.panels #area3 {
+	display: block;
+}
+#tab4:checked~.panels #area4 {
+	display: block;
+}
+#tab5:checked~.panels #area5 {
+	display: block;
+}
+#tab6:checked~.panels #area6 {
+	display: block;
+}
+
+/*チェックボックスとボックス非表示*/
+input[name="check"] {
+	display: none;
+}
+.panel {
+	padding-top: 50px;
+	display: none;
+}
+
+/*アニメーション設定*/
+@keyframes SlideUp {
+	0% {
+		transform: translateY(50px);
+		/* Y軸方向に50px */
+		opacity: 0;
+		/* 透明 */
+	}
+	100% {
+		transform: translateY(0);
+		/* Y軸方向に0px */
+		opacity: 1;
+		/* 不透明 */
+	}
+}
+/*アニメーション設定end*/
+
+/*ボックスを下から上へ*/
+.panel_content {
+	animation-name: SlideUp;
+	animation-duration: 2s;
+	background-color: #fff;
+	width: 100%;
+}
+.events-container {
+    display: flex;
+}
+img {
+    width: 90%;
+    display: flex;
+}
+
+
+.events-container .event-card {
+	width: 18vw;
+	height: auto;
+	border: 3px solid #bc8dbd;
+	margin: 10px; }
+
