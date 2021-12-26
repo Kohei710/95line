@@ -499,7 +499,7 @@ header {
     header .header-right .lang li ul {
       list-style: none;
       position: absolute;
-      top: 100%;
+      top: 70%;
       left: 0;
       margin: 0;
       padding: 0; }
@@ -529,7 +529,8 @@ header {
     header .header-right .lang li:hover ul {
       border-radius: 5px;
       border: 1px solid #bc8dbd;
-      overflow: hidden; }
+      overflow: hidden;
+    }
     header .header-right .lang li:hover ul li {
       height: 38px; }
       @media (max-width: 480px) {
@@ -538,7 +539,8 @@ header {
     header .header-right .lang li:hover ul li:first-child {
       border-bottom: 1px solid #bc8dbd; }
     header .header-right .hamburger {
-      display: none; }
+      display: none; 
+    }
       @media (max-width: 1024px) {
         header .header-right .hamburger {
           display: flex; } }
@@ -736,7 +738,7 @@ members
       padding: 25px 25px 10px 25%;
       height: 40vh;
       font-size: 20px;
-      font-family: Serif; }
+      font-family: Yu Gothic Serif; }
       .member-container .member-box .member-detail li {
         vertical-align: middle;
         list-style: square; }
@@ -773,6 +775,19 @@ members
 .jidori td:first-child {
   width: 120px;
   text-align-last: justify; }
+
+  /* 言語切り替え機能 */
+input[type="radio"]{display:none;}
+.tab_area{font-size:0; margin:0 10px;}
+.tab_area label{width:150px; margin:0 5px; display:inline-block; padding:12px 0; color:#999; background:#ddd; text-align:center; font-size:13px; cursor:pointer; transition:ease 0.2s opacity;}
+.tab_area label:hover{opacity:0.5;}
+.tab_panel{display:none;
+opacity: 1;}
+
+#tab10:checked ~ .tab_area .tab1_label{background:#fff; color:#000;}
+#tab10:checked ~ .panel_area #panel1{display:block;}
+#tab20:checked ~ .tab_area .tab2_label{background:#fff; color:#000;}
+#tab20:checked ~ .panel_area #panel2{display:block;}
 
 /* ----------------------
 contents
@@ -894,14 +909,6 @@ memories
 
 /* ////////////////////////////// */
 
-* {
-	box-sizing: border-box;
-}
-
-body {
-	margin: 0;
-	padding: 0;
-}
 
 .tab_contents {
 	width: 100%;
