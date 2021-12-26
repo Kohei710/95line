@@ -3,12 +3,9 @@
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-
     <title>95line</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="icon" href="images/insta-icon3.png" />
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-    <script src="script.js"></script>
 <!--    OGP-->
     <meta property="og:url" content="https://gavihei.github.io/95line/" />
     <meta property="og:type" content="website" />
@@ -35,13 +32,15 @@
                 <li>
                     <a href="#"><img src="images/lan-icon.png" alt=""></a>
                     <ul>
-                        <li><a class="lan-li" href="#">日本語</a></li>
-                        <li><a class="lan-li" href="#">한국어</a></li>
+                        <!-- <li><a class="lan-li tab-switch" href="#">日本語</a></li>
+                        <li><a class="lan-li tab-switch" href="#">한국어</a></li> -->
+                        <input id="TAB-01" type="radio" name="TAB" class="tab-switch" checked="checked" /><label class="lan-li tab-label" for="TAB-01">日本語</label>
+                        <input id="TAB-02" type="radio" name="TAB" class="tab-switch" /><label class="lan-li tab-label" for="TAB-02">한국어</label>
                     </ul>
                 </li>
             </ul>
             <div class="header-icon hamburger">
-                <a href="#"><img src="images/95-humburgers-1.png" alt=""></a>
+                <div class="open"><img src="images/95-humburgers-1.png" alt=""></div>
             </div>
         </div>
     </header>
@@ -71,6 +70,7 @@
     </div>
 
 
+
     <div class="about-container" id="about">
         <h1 class="heading">ABOUT</h1>
         <div class="about-content">
@@ -81,359 +81,726 @@
         <h2>Sunmoon univ 18 studies turn95Line’ s</h2>
     </div>
 
-    <div class="member-container" id="member">
-        <h1 class="heading">MEMBERS</h1>
-        <div class="member-box member-box3" id="Haruyo">
-            <div class="member-image member-image">
-                <img src="images/1.Ishimi%20Haruyo.jpg" alt="">
-            </div>
-            <h2 class="member-name member-name">Ishimi Haruyo</h2>
-            <div class="member-detail member-detail women-color">
-                <table class="jidori">
-                    <tr>
-                        <td><li>出身</li></td>
-                        <td>: </td>
-                        <td>愛知県</td>
-                    </tr>
-                    <tr>
-                        <td><li>誕生日</li></td>
-                        <td>:</td>
-                        <td>1996.02.28</td>
-                    </tr>
-                    <tr>
-                        <td><li>趣味</li></td>
-                        <td>:</td>
-                        <td>旅行、カフェ巡り、映画鑑賞、ネイル、買い物、ファッションなど</td>
-                    </tr>
-                    <tr>
-                        <td><li>学科</li></td>
-                        <td>:</td>
-                        <td>視覚デザイン学科</td>
-                    </tr>
-                    <tr>
-                        <td><li>動物占い</li></td>
-                        <td>:</td>
-                        <td>しっかり者の小鹿</td>
-                    </tr>
-                </table>
-            </div>
+    <div>
+        <input id="tab10" type="radio" name="tab_btn" checked>
+        <input id="tab20" type="radio" name="tab_btn">
+    
+        <div class="tab_area">
+            <label class="tab1_label" for="tab10">日本語</label>
+            <label class="tab2_label" for="tab20">한국어</label>
         </div>
-        <div class="member-box member-box2" id="Shinya">
-            <div class="member-image member-image2">
-                <img src="images/2.Ito%20Shinya.jpg" alt="">
+        <div class="panel_area">
+            <div id="panel1" class="tab_panel">
+                <div class="member-container" id="member">
+                    <h1 class="heading">MEMBERS</h1>
+                    <div class="member-box member-box3" id="Haruyo">
+                        <div class="member-image member-image">
+                            <img src="images/1.Ishimi%20Haruyo.jpg" alt="">
+                        </div>
+                        <h2 class="member-name member-name">Ishimi Haruyo</h2>
+                        <div class="member-detail member-detail women-color">
+                            <table class="jidori">
+                                <tr>
+                                    <td><li>出身地</li></td>
+                                    <td>: </td>
+                                    <td>愛知県</td>
+                                </tr>
+                                <tr>
+                                    <td><li>誕生日</li></td>
+                                    <td>:</td>
+                                    <td>1996.02.28</td>
+                                </tr>
+                                <tr>
+                                    <td><li>趣味</li></td>
+                                    <td>:</td>
+                                    <td>旅行、カフェ巡り、映画鑑賞、ネイル、買い物、ファッションなど</td>
+                                </tr>
+                                <tr>
+                                    <td><li>学科</li></td>
+                                    <td>:</td>
+                                    <td>視覚デザイン学科</td>
+                                </tr>
+                                <tr>
+                                    <td><li>動物占い</li></td>
+                                    <td>:</td>
+                                    <td>しっかり者の小鹿</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="member-box member-box2" id="Shinya">
+                        <div class="member-image member-image2">
+                            <img src="images/2.Ito%20Shinya.jpg" alt="">
+                        </div>
+                        <h2 class="member-name member-name2">Ito Shinya</h2>
+                        <div class="member-detail member-detail2 men-color">
+                            <table class="jidori">
+                                <tr>
+                                    <td><li>出身</li></td>
+                                    <td>: </td>
+                                    <td>福島県</td>
+                                </tr>
+                                <tr>
+                                    <td><li>誕生日</li></td>
+                                    <td>:</td>
+                                    <td>1995.07.25</td>
+                                </tr>
+                                <tr>
+                                    <td><li>趣味</li></td>
+                                    <td>:</td>
+                                    <td>読書、スカイウォッチング</td>
+                                </tr>
+                                <tr>
+                                    <td><li>学科</li></td>
+                                    <td>:</td>
+                                    <td>神学純潔学科</td>
+                                </tr>
+                                <tr>
+                                    <td><li>動物占い</li></td>
+                                    <td>:</td>
+                                    <td>楽天的な虎</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="member-box member-box3" id="Megumi">
+                        <div class="member-image member-image">
+                            <img src="images/3.Iwasaki%20Megumi.jpg" alt="">
+                        </div>
+                        <h2 class="member-name member-name">Iwasaki Megumi</h2>
+                        <div class="member-detail member-detail women-color">
+                            <table class="jidori">
+                                <tr>
+                                    <td><li>出身</li></td>
+                                    <td>: </td>
+                                    <td>京都府</td>
+                                </tr>
+                                <tr>
+                                    <td><li>誕生日</li></td>
+                                    <td>:</td>
+                                    <td>1995.12.08</td>
+                                </tr>
+                                <tr>
+                                    <td><li>趣味</li></td>
+                                    <td>:</td>
+                                    <td>折り紙、お菓子作り、パズル、コーヒー、夜景、旅行</td>
+                                </tr>
+                                <tr>
+                                    <td><li>学科</li></td>
+                                    <td>:</td>
+                                    <td>ITソフトウェア学科</td>
+                                </tr>
+                                <tr>
+                                    <td><li>動物占い</li></td>
+                                    <td>:</td>
+                                    <td>母性豊かなコアラ</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="member-box member-box2" id="Mayuki">
+                        <div class="member-image member-image2">
+                            <img src="images/4.Kamiike%20Mayuki.jpg" alt="">
+                        </div>
+                        <h2 class="member-name member-name2">Kamiike Mayuki</h2>
+                        <div class="member-detail member-detail2 women-color">
+                            <table class="jidori">
+                                <tr>
+                                    <td><li>出身</li></td>
+                                    <td>: </td>
+                                    <td>香川県</td>
+                                </tr>
+                                <tr>
+                                    <td><li>誕生日</li></td>
+                                    <td>:</td>
+                                    <td>1995.06.21</td>
+                                </tr>
+                                <tr>
+                                    <td><li>趣味</li></td>
+                                    <td>:</td>
+                                    <td>読書、映画鑑賞</td>
+                                </tr>
+                                <tr>
+                                    <td><li>学科</li></td>
+                                    <td>:</td>
+                                    <td>機械工学学科</td>
+                                </tr>
+                                <tr>
+                                    <td><li>動物占い</li></td>
+                                    <td>:</td>
+                                    <td>物静かな羊</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="member-box member-box3" id="Reina">
+                        <div class="member-image member-image">
+                            <img src="images/5.Kawanami%20Reina.jpg" alt="">
+                        </div>
+                        <h2 class="member-name member-name">Kawanami Reina</h2>
+                        <div class="member-detail member-detail women-color">
+                            <table class="jidori">
+                                <tr>
+                                    <td><li>出身</li></td>
+                                    <td>: </td>
+                                    <td>福岡県</td>
+                                </tr>
+                                <tr>
+                                    <td><li>誕生日</li></td>
+                                    <td>:</td>
+                                    <td>1995.12.05</td>
+                                </tr>
+                                <tr>
+                                    <td><li>趣味</li></td>
+                                    <td>:</td>
+                                    <td>散歩、昼寝、コーヒー、歯磨き、食べること</td>
+                                </tr>
+                                <tr>
+                                    <td><li>学科</li></td>
+                                    <td>:</td>
+                                    <td>グローバル韓国語学科</td>
+                                </tr>
+                                <tr>
+                                    <td><li>動物占い</li></td>
+                                    <td>:</td>
+                                    <td>全力疾走するチーター</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="member-box member-box2" id="Hisato">
+                        <div class="member-image member-image2">
+                            <img src="images/6.Sakata%20Hisato.JPG" alt="">
+                        </div>
+                        <h2 class="member-name member-name2">Sakata Hisato</h2>
+                        <div class="member-detail member-detail2 men-color">
+                            <table class="jidori">
+                                <tr>
+                                    <td><li>出身</li></td>
+                                    <td>: </td>
+                                    <td>愛知県</td>
+                                </tr>
+                                <tr>
+                                    <td><li>誕生日</li></td>
+                                    <td>:</td>
+                                    <td>1996.03.07</td>
+                                </tr>
+                                <tr>
+                                    <td><li>趣味</li></td>
+                                    <td>:</td>
+                                    <td>サッカー、料理</td>
+                                </tr>
+                                <tr>
+                                    <td><li>学科</li></td>
+                                    <td>:</td>
+                                    <td>神学純潔学科</td>
+                                </tr>
+                                <tr>
+                                    <td><li>動物占い</li></td>
+                                    <td>:</td>
+                                    <td>尽くす猿</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="member-box member-box3" id="Toshiki">
+                        <div class="member-image member-image">
+                            <img src="images/7.Sawashige%20Toshiki.jpg" alt="">
+                        </div>
+                        <h2 class="member-name member-name">Sawashige Toshiki</h2>
+                        <div class="member-detail member-detail men-color">
+                            <table class="jidori">
+                                <tr>
+                                    <td><li>出身</li></td>
+                                    <td>: </td>
+                                    <td>兵庫県</td>
+                                </tr>
+                                <tr>
+                                    <td><li>誕生日</li></td>
+                                    <td>:</td>
+                                    <td>1996.01.28</td>
+                                </tr>
+                                <tr>
+                                    <td><li>趣味</li></td>
+                                    <td>:</td>
+                                    <td>サッカー、映画鑑賞</td>
+                                </tr>
+                                <tr>
+                                    <td><li>学科</li></td>
+                                    <td>:</td>
+                                    <td>神学純潔学科</td>
+                                </tr>
+                                <tr>
+                                    <td><li>動物占い</li></td>
+                                    <td>:</td>
+                                    <td>社交家のタヌキ</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="member-box member-box2" id="Nami">
+                        <div class="member-image member-image2">
+                            <img src="images/8.Shida%20Nami.jpg" alt="">
+                        </div>
+                        <h2 class="member-name member-name2">Shida Nami</h2>
+                        <div class="member-detail member-detail2 women-color">
+                            <table class="jidori">
+                                <tr>
+                                    <td><li>出身</li></td>
+                                    <td>: </td>
+                                    <td>岩手県</td>
+                                </tr>
+                                <tr>
+                                    <td><li>誕生日</li></td>
+                                    <td>:</td>
+                                    <td>1996.01.17</td>
+                                </tr>
+                                <tr>
+                                    <td><li>趣味</li></td>
+                                    <td>:</td>
+                                    <td>お皿探し、駅巡り、料理、旅、切手探し、カラオケ、自然と会話など</td>
+                                </tr>
+                                <tr>
+                                    <td><li>学科</li></td>
+                                    <td>:</td>
+                                    <td>神学純潔学科</td>
+                                </tr>
+                                <tr>
+                                    <td><li>動物占い</li></td>
+                                    <td>:</td>
+                                    <td>落ち込みの激しい黒豹</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div><div class="member-box member-box3" id="Hayato">
+                    <div class="member-image member-image">
+                        <img src="images/9.Tsukada%20Hayato.jpg" alt="">
+                    </div>
+                    <h2 class="member-name member-name">Tsukada Hayato</h2>
+                    <div class="member-detail member-detail men-color">
+                        <table class="jidori">
+                            <tr>
+                                <td><li>出身</li></td>
+                                <td>: </td>
+                                <td>広島県</td>
+                            </tr>
+                            <tr>
+                                <td><li>誕生日</li></td>
+                                <td>:</td>
+                                <td>1995.12.19</td>
+                            </tr>
+                            <tr>
+                                <td><li>趣味</li></td>
+                                <td>:</td>
+                                <td>サッカー、麻雀</td>
+                            </tr>
+                            <tr>
+                                <td><li>学科</li></td>
+                                <td>:</td>
+                                <td>神学純潔学科</td>
+                            </tr>
+                            <tr>
+                                <td><li>動物占い</li></td>
+                                <td>:</td>
+                                <td>落ち着きのあるペガサス</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                    <div class="member-box member-box2" id="Kanna">
+                        <div class="member-image member-image2">
+                            <img src="images/10.Hirai%20Kanna.jpg" alt="">
+                        </div>
+                        <h2 class="member-name member-name2">Hirai Kanna</h2>
+                        <div class="member-detail member-detail2 women-color">
+                            <table class="jidori">
+                            <tr>
+                                <td><li>出身</li></td>
+                                <td>: </td>
+                                <td>静岡県</td>
+                            </tr>
+                            <tr>
+                                <td><li>誕生日</li></td>
+                                <td>:</td>
+                                <td>1995.10.24</td>
+                            </tr>
+                            <tr>
+                                <td><li>趣味</li></td>
+                                <td>:</td>
+                                <td>旅行、韓ドラ、ネイル、買い物、カフェ、新しいことする(体験系)、ギターもやりため</td>
+                            </tr>
+                            <tr>
+                                <td><li>学科</li></td>
+                                <td>:</td>
+                                <td>国際経済通商学科</td>
+                            </tr>
+                            <tr>
+                                <td><li>動物占い</li></td>
+                                <td>:</td>
+                                <td>穏やかな狼</td>
+                            </tr>
+                        </table>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <h2 class="member-name member-name2">Ito Shinya</h2>
-            <div class="member-detail member-detail2 men-color">
-                <table class="jidori">
-                    <tr>
-                        <td><li>出身</li></td>
-                        <td>: </td>
-                        <td>福島県</td>
-                    </tr>
-                    <tr>
-                        <td><li>誕生日</li></td>
-                        <td>:</td>
-                        <td>1995.07.25</td>
-                    </tr>
-                    <tr>
-                        <td><li>趣味</li></td>
-                        <td>:</td>
-                        <td>読書、スカイウォッチング</td>
-                    </tr>
-                    <tr>
-                        <td><li>学科</li></td>
-                        <td>:</td>
-                        <td>神学純潔学科</td>
-                    </tr>
-                    <tr>
-                        <td><li>動物占い</li></td>
-                        <td>:</td>
-                        <td>楽天的な虎</td>
-                    </tr>
-                </table>
+            <div id="panel2" class="tab_panel">
+                <div class="member-container" id="member">
+                    <h1 class="heading">MEMBERS</h1>
+                    <div class="member-box member-box3" id="Haruyo">
+                        <div class="member-image member-image">
+                            <img src="images/1.Ishimi%20Haruyo.jpg" alt="">
+                        </div>
+                        <h2 class="member-name member-name">Ishimi Haruyo</h2>
+                        <div class="member-detail member-detail women-color">
+                            <table class="jidori">
+                                <tr>
+                                    <td><li>출신</li></td>
+                                    <td>: </td>
+                                    <td>아이치</td>
+                                </tr>
+                                <tr>
+                                    <td><li>생일</li></td>
+                                    <td>:</td>
+                                    <td>1996.02.28</td>
+                                </tr>
+                                <tr>
+                                    <td><li>취미</li></td>
+                                    <td>:</td>
+                                    <td>여행, 카페가기, 영화감상, 네일, 쇼핑,패션</td>
+                                </tr>
+                                <tr>
+                                    <td><li>학과</li></td>
+                                    <td>:</td>
+                                    <td>시각디자인학과</td>
+                                </tr>
+                                <tr>
+                                    <td><li>MBTI</li></td>
+                                    <td>:</td>
+                                    <td>ESFJ</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="member-box member-box2" id="Shinya">
+                        <div class="member-image member-image2">
+                            <img src="images/2.Ito%20Shinya.jpg" alt="">
+                        </div>
+                        <h2 class="member-name member-name2">Ito Shinya</h2>
+                        <div class="member-detail member-detail2 men-color">
+                            <table class="jidori">
+                                <tr>
+                                    <td><li>출신</li></td>
+                                    <td>: </td>
+                                    <td>후쿠시마</td>
+                                </tr>
+                                <tr>
+                                    <td><li>생일</li></td>
+                                    <td>:</td>
+                                    <td>1995.07.25</td>
+                                </tr>
+                                <tr>
+                                    <td><li>취미</li></td>
+                                    <td>:</td>
+                                    <td>독서, 스카이워칭</td>
+                                </tr>
+                                <tr>
+                                    <td><li>학과</li></td>
+                                    <td>:</td>
+                                    <td>신학순결학과</td>
+                                </tr>
+                                <tr>
+                                    <td><li>MBTI</li></td>
+                                    <td>:</td>
+                                    <td>ISFJ</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="member-box member-box3" id="Megumi">
+                        <div class="member-image member-image">
+                            <img src="images/3.Iwasaki%20Megumi.jpg" alt="">
+                        </div>
+                        <h2 class="member-name member-name">Iwasaki Megumi</h2>
+                        <div class="member-detail member-detail women-color">
+                            <table class="jidori">
+                                <tr>
+                                    <td><li>출신</li></td>
+                                    <td>: </td>
+                                    <td>京都府</td>
+                                </tr>
+                                <tr>
+                                    <td><li>생일</li></td>
+                                    <td>:</td>
+                                    <td>1995.12.08</td>
+                                </tr>
+                                <tr>
+                                    <td><li>취미</li></td>
+                                    <td>:</td>
+                                    <td>종이접기, 과자 만들기, 퍼즐 맞추기, 커피, 야경, 여행</td>
+                                </tr>
+                                <tr>
+                                    <td><li>학과</li></td>
+                                    <td>:</td>
+                                    <td>IT소프트웨어학과</td>
+                                </tr>
+                                <tr>
+                                    <td><li>MBTI</li></td>
+                                    <td>:</td>
+                                    <td>ISFJ</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="member-box member-box2" id="Mayuki">
+                        <div class="member-image member-image2">
+                            <img src="images/4.Kamiike%20Mayuki.jpg" alt="">
+                        </div>
+                        <h2 class="member-name member-name2">Kamiike Mayuki</h2>
+                        <div class="member-detail member-detail2 women-color">
+                            <table class="jidori">
+                                <tr>
+                                    <td><li>출신</li></td>
+                                    <td>: </td>
+                                    <td>카가와</td>
+                                </tr>
+                                <tr>
+                                    <td><li>생일</li></td>
+                                    <td>:</td>
+                                    <td>1995.06.21</td>
+                                </tr>
+                                <tr>
+                                    <td><li>취미</li></td>
+                                    <td>:</td>
+                                    <td>독서, 영화감상</td>
+                                </tr>
+                                <tr>
+                                    <td><li>학과</li></td>
+                                    <td>:</td>
+                                    <td>기계공학과</td>
+                                </tr>
+                                <tr>
+                                    <td><li>MBTI</li></td>
+                                    <td>:</td>
+                                    <td>ISTJ</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="member-box member-box3" id="Reina">
+                        <div class="member-image member-image">
+                            <img src="images/5.Kawanami%20Reina.jpg" alt="">
+                        </div>
+                        <h2 class="member-name member-name">Kawanami Reina</h2>
+                        <div class="member-detail member-detail women-color">
+                            <table class="jidori">
+                                <tr>
+                                    <td><li>출신</li></td>
+                                    <td>: </td>
+                                    <td>후쿠오카</td>
+                                </tr>
+                                <tr>
+                                    <td><li>생일</li></td>
+                                    <td>:</td>
+                                    <td>1995.12.05</td>
+                                </tr>
+                                <tr>
+                                    <td><li>취미</li></td>
+                                    <td>:</td>
+                                    <td>산책, 낮잠, 커피, 양치,먹기</td>
+                                </tr>
+                                <tr>
+                                    <td><li>학과</li></td>
+                                    <td>:</td>
+                                    <td>글로벌한국학과</td>
+                                </tr>
+                                <tr>
+                                    <td><li>MBTI</li></td>
+                                    <td>:</td>
+                                    <td>ESFJ</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="member-box member-box2" id="Hisato">
+                        <div class="member-image member-image2">
+                            <img src="images/6.Sakata%20Hisato.JPG" alt="">
+                        </div>
+                        <h2 class="member-name member-name2">Sakata Hisato</h2>
+                        <div class="member-detail member-detail2 men-color">
+                            <table class="jidori">
+                                <tr>
+                                    <td><li>출신</li></td>
+                                    <td>: </td>
+                                    <td>아이치</td>
+                                </tr>
+                                <tr>
+                                    <td><li>생일</li></td>
+                                    <td>:</td>
+                                    <td>1996.03.07</td>
+                                </tr>
+                                <tr>
+                                    <td><li>취미</li></td>
+                                    <td>:</td>
+                                    <td>축구, 요리</td>
+                                </tr>
+                                <tr>
+                                    <td><li>학과</li></td>
+                                    <td>:</td>
+                                    <td>신학순결학과</td>
+                                </tr>
+                                <tr>
+                                    <td><li>MBTI</li></td>
+                                    <td>:</td>
+                                    <td>ESFJ</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="member-box member-box3" id="Toshiki">
+                        <div class="member-image member-image">
+                            <img src="images/7.Sawashige%20Toshiki.jpg" alt="">
+                        </div>
+                        <h2 class="member-name member-name">Sawashige Toshiki</h2>
+                        <div class="member-detail member-detail men-color">
+                            <table class="jidori">
+                                <tr>
+                                    <td><li>출신</li></td>
+                                    <td>: </td>
+                                    <td>효고</td>
+                                </tr>
+                                <tr>
+                                    <td><li>생일</li></td>
+                                    <td>:</td>
+                                    <td>1996.01.28</td>
+                                </tr>
+                                <tr>
+                                    <td><li>취미</li></td>
+                                    <td>:</td>
+                                    <td>축구, 영화감상</td>
+                                </tr>
+                                <tr>
+                                    <td><li>학과</li></td>
+                                    <td>:</td>
+                                    <td>신학순결학과</td>
+                                </tr>
+                                <tr>
+                                    <td><li>MBTI</li></td>
+                                    <td>:</td>
+                                    <td>ENTJ</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="member-box member-box2" id="Nami">
+                        <div class="member-image member-image2">
+                            <img src="images/8.Shida%20Nami.jpg" alt="">
+                        </div>
+                        <h2 class="member-name member-name2">Shida Nami</h2>
+                        <div class="member-detail member-detail2 women-color">
+                            <table class="jidori">
+                                <tr>
+                                    <td><li>출신</li></td>
+                                    <td>: </td>
+                                    <td>이와테</td>
+                                </tr>
+                                <tr>
+                                    <td><li>생일</li></td>
+                                    <td>:</td>
+                                    <td>1996.01.17</td>
+                                </tr>
+                                <tr>
+                                    <td><li>취미</li></td>
+                                    <td>:</td>
+                                    <td>접시 찾기, 역 돌기, 요리, 여행, 우표 찾기, 노래방, 자연과 대화 등</td>
+                                </tr>
+                                <tr>
+                                    <td><li>학과</li></td>
+                                    <td>:</td>
+                                    <td>신학순결학과</td>
+                                </tr>
+                                <tr>
+                                    <td><li>MBTI</li></td>
+                                    <td>:</td>
+                                    <td>ENFP</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div><div class="member-box member-box3" id="Hayato">
+                    <div class="member-image member-image">
+                        <img src="images/9.Tsukada%20Hayato.jpg" alt="">
+                    </div>
+                    <h2 class="member-name member-name">Tsukada Hayato</h2>
+                    <div class="member-detail member-detail men-color">
+                        <table class="jidori">
+                            <tr>
+                                <td><li>출신</li></td>
+                                <td>: </td>
+                                <td>히로시마</td>
+                            </tr>
+                            <tr>
+                                <td><li>생일</li></td>
+                                <td>:</td>
+                                <td>1995.12.19</td>
+                            </tr>
+                            <tr>
+                                <td><li>취미</li></td>
+                                <td>:</td>
+                                <td>축구, 마작</td>
+                            </tr>
+                            <tr>
+                                <td><li>학과</li></td>
+                                <td>:</td>
+                                <td>신학순결학과</td>
+                            </tr>
+                            <tr>
+                                <td><li>MBTI</li></td>
+                                <td>:</td>
+                                <td>ESFP</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                    <div class="member-box member-box2" id="Kanna">
+                        <div class="member-image member-image2">
+                            <img src="images/10.Hirai%20Kanna.jpg" alt="">
+                        </div>
+                        <h2 class="member-name member-name2">Hirai Kanna</h2>
+                        <div class="member-detail member-detail2 women-color">
+                            <table class="jidori">
+                            <tr>
+                                <td><li>출신</li></td>
+                                <td>: </td>
+                                <td>시즈오카</td>
+                            </tr>
+                            <tr>
+                                <td><li>생일</li></td>
+                                <td>:</td>
+                                <td>1995.10.24</td>
+                            </tr>
+                            <tr>
+                                <td><li>취미</li></td>
+                                <td>:</td>
+                                <td>여행, 한국드라마 보기, 네일, 쇼핑, 카페, 새로운 경험을 쌓기, 기타(体験系)、ギターもやりため</td>
+                            </tr>
+                            <tr>
+                                <td><li>학과</li></td>
+                                <td>:</td>
+                                <td>국제경제통상학과</td>
+                            </tr>
+                            <tr>
+                                <td><li>MBTI</li></td>
+                                <td>:</td>
+                                <td>ISTP</td>
+                            </tr>
+                        </table>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="member-box member-box3" id="Megumi">
-            <div class="member-image member-image">
-                <img src="images/3.Iwasaki%20Megumi.jpg" alt="">
-            </div>
-            <h2 class="member-name member-name">Iwasaki Megumi</h2>
-            <div class="member-detail member-detail women-color">
-                <table class="jidori">
-                    <tr>
-                        <td><li>出身</li></td>
-                        <td>: </td>
-                        <td>京都府</td>
-                    </tr>
-                    <tr>
-                        <td><li>誕生日</li></td>
-                        <td>:</td>
-                        <td>1995.12.08</td>
-                    </tr>
-                    <tr>
-                        <td><li>趣味</li></td>
-                        <td>:</td>
-                        <td>折り紙、お菓子作り、パズル、コーヒー、夜景、旅行</td>
-                    </tr>
-                    <tr>
-                        <td><li>学科</li></td>
-                        <td>:</td>
-                        <td>ITソフトウェア学科</td>
-                    </tr>
-                    <tr>
-                        <td><li>動物占い</li></td>
-                        <td>:</td>
-                        <td>母性豊かなコアラ</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-        <div class="member-box member-box2" id="Mayuki">
-            <div class="member-image member-image2">
-                <img src="images/4.Kamiike%20Mayuki.jpg" alt="">
-            </div>
-            <h2 class="member-name member-name2">Kamiike Mayuki</h2>
-            <div class="member-detail member-detail2 women-color">
-                <table class="jidori">
-                    <tr>
-                        <td><li>出身</li></td>
-                        <td>: </td>
-                        <td>香川県</td>
-                    </tr>
-                    <tr>
-                        <td><li>誕生日</li></td>
-                        <td>:</td>
-                        <td>1995.06.21</td>
-                    </tr>
-                    <tr>
-                        <td><li>趣味</li></td>
-                        <td>:</td>
-                        <td>読書、映画鑑賞</td>
-                    </tr>
-                    <tr>
-                        <td><li>学科</li></td>
-                        <td>:</td>
-                        <td>機械工学学科</td>
-                    </tr>
-                    <tr>
-                        <td><li>動物占い</li></td>
-                        <td>:</td>
-                        <td>物静かな羊</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-        <div class="member-box member-box3" id="Reina">
-            <div class="member-image member-image">
-                <img src="images/5.Kawanami%20Reina.jpg" alt="">
-            </div>
-            <h2 class="member-name member-name">Kawanami Reina</h2>
-            <div class="member-detail member-detail women-color">
-                <table class="jidori">
-                    <tr>
-                        <td><li>出身</li></td>
-                        <td>: </td>
-                        <td>福岡県</td>
-                    </tr>
-                    <tr>
-                        <td><li>誕生日</li></td>
-                        <td>:</td>
-                        <td>1995.12.05</td>
-                    </tr>
-                    <tr>
-                        <td><li>趣味</li></td>
-                        <td>:</td>
-                        <td>散歩、昼寝、コーヒー、歯磨き、食べること</td>
-                    </tr>
-                    <tr>
-                        <td><li>学科</li></td>
-                        <td>:</td>
-                        <td>グローバル韓国語学科</td>
-                    </tr>
-                    <tr>
-                        <td><li>動物占い</li></td>
-                        <td>:</td>
-                        <td>全力疾走するチーター</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-        <div class="member-box member-box2" id="Hisato">
-            <div class="member-image member-image2">
-                <img src="images/6.Sakata%20Hisato.JPG" alt="">
-            </div>
-            <h2 class="member-name member-name2">Sakata Hisato</h2>
-            <div class="member-detail member-detail2 men-color">
-                <table class="jidori">
-                    <tr>
-                        <td><li>出身</li></td>
-                        <td>: </td>
-                        <td>愛知県</td>
-                    </tr>
-                    <tr>
-                        <td><li>誕生日</li></td>
-                        <td>:</td>
-                        <td>1996.03.07</td>
-                    </tr>
-                    <tr>
-                        <td><li>趣味</li></td>
-                        <td>:</td>
-                        <td>サッカー、料理</td>
-                    </tr>
-                    <tr>
-                        <td><li>学科</li></td>
-                        <td>:</td>
-                        <td>神学純潔学科</td>
-                    </tr>
-                    <tr>
-                        <td><li>動物占い</li></td>
-                        <td>:</td>
-                        <td>尽くす猿</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-        <div class="member-box member-box3" id="Toshiki">
-            <div class="member-image member-image">
-                <img src="images/7.Sawashige%20Toshiki.jpg" alt="">
-            </div>
-            <h2 class="member-name member-name">Sawashige Toshiki</h2>
-            <div class="member-detail member-detail men-color">
-                <table class="jidori">
-                    <tr>
-                        <td><li>出身</li></td>
-                        <td>: </td>
-                        <td>兵庫県</td>
-                    </tr>
-                    <tr>
-                        <td><li>誕生日</li></td>
-                        <td>:</td>
-                        <td>1996.01.28</td>
-                    </tr>
-                    <tr>
-                        <td><li>趣味</li></td>
-                        <td>:</td>
-                        <td>サッカー、映画鑑賞</td>
-                    </tr>
-                    <tr>
-                        <td><li>学科</li></td>
-                        <td>:</td>
-                        <td>神学純潔学科</td>
-                    </tr>
-                    <tr>
-                        <td><li>動物占い</li></td>
-                        <td>:</td>
-                        <td>社交家のタヌキ</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-        <div class="member-box member-box2" id="Nami">
-            <div class="member-image member-image2">
-                <img src="images/8.Shida%20Nami.jpg" alt="">
-            </div>
-            <h2 class="member-name member-name2">Shida Nami</h2>
-            <div class="member-detail member-detail2 women-color">
-                <table class="jidori">
-                    <tr>
-                        <td><li>出身</li></td>
-                        <td>: </td>
-                        <td>岩手県</td>
-                    </tr>
-                    <tr>
-                        <td><li>誕生日</li></td>
-                        <td>:</td>
-                        <td>1996.01.17</td>
-                    </tr>
-                    <tr>
-                        <td><li>趣味</li></td>
-                        <td>:</td>
-                        <td>お皿探し、駅巡り、料理、旅、切手探し、カラオケ、自然と会話など</td>
-                    </tr>
-                    <tr>
-                        <td><li>学科</li></td>
-                        <td>:</td>
-                        <td>神学純潔学科</td>
-                    </tr>
-                    <tr>
-                        <td><li>動物占い</li></td>
-                        <td>:</td>
-                        <td>落ち込みの激しい黒豹</td>
-                    </tr>
-                </table>
-            </div>
-        </div><div class="member-box member-box3" id="Hayato">
-        <div class="member-image member-image">
-            <img src="images/9.Tsukada%20Hayato.jpg" alt="">
-        </div>
-        <h2 class="member-name member-name">Tsukada Hayato</h2>
-        <div class="member-detail member-detail men-color">
-            <table class="jidori">
-                <tr>
-                    <td><li>出身</li></td>
-                    <td>: </td>
-                    <td>広島県</td>
-                </tr>
-                <tr>
-                    <td><li>誕生日</li></td>
-                    <td>:</td>
-                    <td>1995.12.19</td>
-                </tr>
-                <tr>
-                    <td><li>趣味</li></td>
-                    <td>:</td>
-                    <td>サッカー、麻雀</td>
-                </tr>
-                <tr>
-                    <td><li>学科</li></td>
-                    <td>:</td>
-                    <td>神学純潔学科</td>
-                </tr>
-                <tr>
-                    <td><li>動物占い</li></td>
-                    <td>:</td>
-                    <td>落ち着きのあるペガサス</td>
-                </tr>
-            </table>
         </div>
     </div>
-        <div class="member-box member-box2" id="Kanna">
-            <div class="member-image member-image2">
-                <img src="images/10.Hirai%20Kanna.jpg" alt="">
-            </div>
-            <h2 class="member-name member-name2">Hirai Kanna</h2>
-            <div class="member-detail member-detail2 women-color">
-                <table class="jidori">
-                <tr>
-                    <td><li>出身</li></td>
-                    <td>: </td>
-                    <td>静岡県</td>
-                </tr>
-                <tr>
-                    <td><li>誕生日</li></td>
-                    <td>:</td>
-                    <td>1995.10.24</td>
-                </tr>
-                <tr>
-                    <td><li>趣味</li></td>
-                    <td>:</td>
-                    <td>旅行、韓ドラ、ネイル、買い物、カフェ、新しいことする(体験系)、ギターもやりため</td>
-                </tr>
-                <tr>
-                    <td><li>学科</li></td>
-                    <td>:</td>
-                    <td>国際経済通商学科</td>
-                </tr>
-                <tr>
-                    <td><li>動物占い</li></td>
-                    <td>:</td>
-                    <td>穏やかな狼</td>
-                </tr>
-            </table>
-            </div>
-        </div>
 
-    </div>
     <div class="contents-container" id="contents">
         <h1 class="heading">CONTENTS</h1>
         <div class="icon-box">
@@ -500,5 +867,185 @@
             </div>
         </div>
     </div>
+    <div class="memories-container" id="memories">
+        <h1 class="heading">MEMORIES</h1>
+<!--        <div class="event-header">-->
+<!--            <a href="#" class="event-cate">語学院</a>-->
+<!--            <a href="#" class="event-cate">~2019</a>-->
+<!--            <a href="#" class="event-cate">2020</a>-->
+<!--            <a href="#" class="event-cate">2021</a>-->
+<!--            <a href="#" class="event-cate">MOVIE</a>-->
+<!--        </div>-->
+
+
+        <section class="tab_contents">
+            <div class="tab_wrap">
+                <input id="tab1" type="radio" name="check" checked>
+                <label for="tab1" class="tab_lab1">語学院</label>
+                <input id="tab2" type="radio" name="check">
+                <label for="tab2" class="tab_lab2">~2019</label>
+                <input id="tab3" type="radio" name="check">
+                <label for="tab3" class="tab_lab3">2020</label>
+                <input id="tab4" type="radio" name="check">
+                <label for="tab4" class="tab_lab4">2021</label>
+                <input id="tab5" type="radio" name="check">
+                <label for="tab5" class="tab_lab5">VIDEOS</label>
+                <div class="panels">
+                    <div id="area1" class="panel">
+                        <div class="events-container panel_content">
+                            <div class="event-card">
+                                <div class="event-image"><img src="images/95-T-Shirt-front.jpg" alt=""></div>
+                                <p>隔離生活</p>
+                            </div>
+                            <div class="event-card">
+                                <div class="event-image"><img src="images/95-T-Shirt-front.jpg" alt=""></div>
+                                <p>隔離生活</p>
+                            </div>
+                            <div class="event-card">
+                                <div class="event-image"><img src="images/95-T-Shirt-front.jpg" alt=""></div>
+                                <p>隔離生活</p>
+                            </div>
+                            <div class="event-card">
+                                <div class="event-image"><img src="images/95-T-Shirt-front.jpg" alt=""></div>
+                                <p>隔離生活</p>
+                            </div>
+                            <div class="event-card">
+                                <div class="event-image"><img src="images/95-T-Shirt-front.jpg" alt=""></div>
+                                <p>隔離生活</p>
+                            </div>
+                            <div class="event-card">
+                                <div class="event-image"><img src="images/95-T-Shirt-front.jpg" alt=""></div>
+                                <p>隔離生活</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="area2" class="panel">
+                        <div class="events-container panel_content">
+                            <div class="event-card">
+                                <div class="event-image"><img src="images/95-T-Shirt-front.jpg" alt=""></div>
+                                <p>隔離生活</p>
+                            </div>
+                            <div class="event-card">
+                                <div class="event-image"><img src="images/95-T-Shirt-front.jpg" alt=""></div>
+                                <p>隔離生活</p>
+                            </div>
+                            <div class="event-card">
+                                <div class="event-image"><img src="images/95-T-Shirt-front.jpg" alt=""></div>
+                                <p>隔離生活</p>
+                            </div>
+                            <div class="event-card">
+                                <div class="event-image"><img src="images/95-T-Shirt-front.jpg" alt=""></div>
+                                <p>隔離生活</p>
+                            </div>
+                            <div class="event-card">
+                                <div class="event-image"><img src="images/95-T-Shirt-front.jpg" alt=""></div>
+                                <p>隔離生活</p>
+                            </div>
+                            <div class="event-card">
+                                <div class="event-image"><img src="images/95-T-Shirt-front.jpg" alt=""></div>
+                                <p>隔離生活</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="area3" class="panel">
+                        <div class="events-container panel_content">
+                            <div class="event-card">
+                                <div class="event-image"><img src="images/95-T-Shirt-front.jpg" alt=""></div>
+                                <p>隔離生活</p>
+                            </div>
+                            <div class="event-card">
+                                <div class="event-image"><img src="images/95-T-Shirt-front.jpg" alt=""></div>
+                                <p>隔離生活</p>
+                            </div>
+                            <div class="event-card">
+                                <div class="event-image"><img src="images/95-T-Shirt-front.jpg" alt=""></div>
+                                <p>隔離生活</p>
+                            </div>
+                            <div class="event-card">
+                                <div class="event-image"><img src="images/95-T-Shirt-front.jpg" alt=""></div>
+                                <p>隔離生活</p>
+                            </div>
+                            <div class="event-card">
+                                <div class="event-image"><img src="images/95-T-Shirt-front.jpg" alt=""></div>
+                                <p>隔離生活</p>
+                            </div>
+                            <div class="event-card">
+                                <div class="event-image"><img src="images/95-T-Shirt-front.jpg" alt=""></div>
+                                <p>隔離生活</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="area4" class="panel">
+                        <div class="events-container panel_content">
+                            <div class="event-card">
+                                <div class="event-image"><img src="images/95-T-Shirt-front.jpg" alt=""></div>
+                                <p>隔離生活</p>
+                            </div>
+                            <div class="event-card">
+                                <div class="event-image"><img src="images/95-T-Shirt-front.jpg" alt=""></div>
+                                <p>隔離生活</p>
+                            </div>
+                            <div class="event-card">
+                                <div class="event-image"><img src="images/95-T-Shirt-front.jpg" alt=""></div>
+                                <p>隔離生活</p>
+                            </div>
+                            <div class="event-card">
+                                <div class="event-image"><img src="images/95-T-Shirt-front.jpg" alt=""></div>
+                                <p>隔離生活</p>
+                            </div>
+                            <div class="event-card">
+                                <div class="event-image"><img src="images/95-T-Shirt-front.jpg" alt=""></div>
+                                <p>隔離生活</p>
+                            </div>
+                            <div class="event-card">
+                                <div class="event-image"><img src="images/95-T-Shirt-front.jpg" alt=""></div>
+                                <p>隔離生活</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="area5" class="panel">
+                        <div class="events-container panel_content">
+                            <div class="event-card">
+                                <div class="event-image"><img src="images/95-T-Shirt-front.jpg" alt=""></div>
+                                <p>隔離生活</p>
+                            </div>
+                            <div class="event-card">
+                                <div class="event-image"><img src="images/95-T-Shirt-front.jpg" alt=""></div>
+                                <p>隔離生活</p>
+                            </div>
+                            <div class="event-card">
+                                <div class="event-image"><img src="images/95-T-Shirt-front.jpg" alt=""></div>
+                                <p>隔離生活</p>
+                            </div>
+                            <div class="event-card">
+                                <div class="event-image"><img src="images/95-T-Shirt-front.jpg" alt=""></div>
+                                <p>隔離生活</p>
+                            </div>
+                            <div class="event-card">
+                                <div class="event-image"><img src="images/95-T-Shirt-front.jpg" alt=""></div>
+                                <p>隔離生活</p>
+                            </div>
+                            <div class="event-card">
+                                <div class="event-image"><img src="images/95-T-Shirt-front.jpg" alt=""></div>
+                                <p>隔離生活</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <div class="modal">
+        <div class="close"><img src="images/menu-close.png" alt=""></div>
+        TOP<br />
+        ABOUT<br />
+        MEMBERS<br />
+        MEMORIES<br />
+        CONTENTS
+    </div>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
