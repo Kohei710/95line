@@ -439,7 +439,8 @@ img {
 header {
   display: flex;
   justify-content: space-between;
-  margin: 30px; }
+  /* margin: 30px; */
+ }
   header .header-logo {
     width: 300px;
     margin-left: 35px; }
@@ -701,12 +702,22 @@ about
       .about-container h2 {
         font-size: 14px;
         margin: 20px; } }
+        
+  .Arrow-Bottom {
+    margin: 0 auto;
+    border-bottom: solid 2px gray;
+    border-right: solid 2px gray;
+    width: 55px;
+    height: 55px;
+    transform: rotate(45deg);
+    }      
 
 /* ----------------------
 members
  ---------------------- */
 .member-container {
-  margin-top: 100px; }
+  padding: 50px 0;
+  background:lavender; }
   .member-container .member-box {
     width: 70%;
     height: 40vh;
@@ -738,7 +749,7 @@ members
       padding: 25px 25px 10px 25%;
       height: 40vh;
       font-size: 20px;
-      font-family: Yu Gothic Serif; }
+      font-family: 'Noto Sans KR', sans-serif; }
       .member-container .member-box .member-detail li {
         vertical-align: middle;
         list-style: square; }
@@ -778,15 +789,34 @@ members
 
   /* 言語切り替え機能 */
 input[type="radio"]{display:none;}
-.tab_area{font-size:0; margin:0 10px;}
-.tab_area label{width:150px; margin:0 5px; display:inline-block; padding:12px 0; color:#999; background:#ddd; text-align:center; font-size:13px; cursor:pointer; transition:ease 0.2s opacity;}
-.tab_area label:hover{opacity:0.5;}
-.tab_panel{display:none;
-opacity: 1;}
+.tab_area{
+  font-size:0;
+  margin:0 auto; 
+  width: 50%;     
+  display: flex;
+  justify-content: space-around;
+}
+.tab_area label{
+  width:150px; 
+  margin:0 5px; 
+  display:inline-block; 
+  padding:12px 0; 
+  color:#999;  
+  text-align:center; 
+  font-size:20px; 
+  font-family: 'Noto Sans KR', sans-serif; 
+  cursor:pointer; 
+  transition:ease 0.2s opacity;}
+.tab_area label:hover{
+  opacity:0.5; 
+  background:lavender;}
+.tab_panel{
+  display:none;
+  opacity: 1;}
 
-#tab10:checked ~ .tab_area .tab1_label{background:#fff; color:#000;}
+#tab10:checked ~ .tab_area .tab1_label{background:lavender; color:gray;}
 #tab10:checked ~ .panel_area #panel1{display:block;}
-#tab20:checked ~ .tab_area .tab2_label{background:#fff; color:#000;}
+#tab20:checked ~ .tab_area .tab2_label{background:lavender; color:gray;}
 #tab20:checked ~ .panel_area #panel2{display:block;}
 
 /* ----------------------
