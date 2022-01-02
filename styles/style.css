@@ -910,7 +910,7 @@ contents
 /* ----------------------
 memories
  ---------------------- */
-.memories-container {
+/* .memories-container {
   width: 80%;
   margin: auto; }
   .memories-container .event-header {
@@ -966,12 +966,12 @@ memories
 
 .event-cate {
   /* 横スクロール用 */
-  display: inline-block;
-  width: 90%; }
-
-#tabpage1 {
+  /* display: inline-block;
+  width: 90%; } */
+/*  */
+/* #tabpage1 {
   background-color: #868686;
-  height: 300px; }
+  height: 300px; } */ 
 
 /*# sourceMappingURL=style.css.map */
 
