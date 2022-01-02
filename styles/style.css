@@ -728,7 +728,7 @@ members
     @media (max-width: 480px) {
       .member-container .member-box {
         width: 90%;
-        height: 80vh;
+        height: 70vh;
         margin: 40px auto 100px auto; }
     }
     .member-container .member-box .member-image {
@@ -753,6 +753,13 @@ members
       content: "";
       height: 100%;
       width: 100%; }
+      @media (max-width: 480px) {
+        .member-container .member-box .member-image:after {
+        top: 8px;
+        left: 8px;
+        border: 2px solid gray;
+        }
+      }
     .member-container .member-box .member-name {
       text-align: right;
       font-size: 38px;
@@ -770,10 +777,9 @@ members
       @media (max-width: 480px) {
         .member-container .member-box .member-detail {
           color: white;
-          width: 90%;
-          float: right;
+          width: 100%;
           padding: 10px;
-          height: 40vh;}
+          height: 35vh;}
       }
       .member-container .member-box .member-detail li {
         vertical-align: middle;
@@ -784,10 +790,20 @@ members
         }
   .member-container .member-box2 .member-image2 {
     right: 15%; }
-  .member-container .member-box2 .member-image2:after {
-    left: 15px; }
+  .member-container .member-box2 .member-image2:after { 
+    left: 15px; } 
+    @media (max-width: 480px) {
+      .member-container .member-box2 .member-image2 {
+        right: 0%; }
+      .member-container .member-box2 .member-image2:after { 
+        left: 8px; } 
+    }
   .member-container .member-box2 .member-name2 {
     text-align: left; }
+    @media (max-width: 480px) {
+      .member-container .member-box2 .member-name2 {
+        text-align: right; }
+    }
   .member-container .member-box2 .member-detail2 {
     float: left;
     padding: 25px 25% 10px 25px; }
